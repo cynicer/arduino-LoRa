@@ -77,6 +77,7 @@ public:
   void disableInvertIQ();
   
   void setOCP(uint8_t mA); // Over Current Protection control
+  bool isTransmitting();
 
   // deprecated
   void crc() { enableCrc(); }
@@ -95,7 +96,6 @@ private:
   void implicitHeaderMode();
 
   void handleDio0Rise();
-  bool isTransmitting();
 
   int getSpreadingFactor();
   long getSignalBandwidth();
